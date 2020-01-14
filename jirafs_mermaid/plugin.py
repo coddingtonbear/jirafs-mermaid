@@ -69,7 +69,7 @@ class MermaidMixin(object):
         except (subprocess.CalledProcessError, IOError, OSError):
             raise PluginValidationError(
                 "%s requires mermaid.cli to be installed." % (
-                    self.plugin_name,
+                    self.entrypoint_name,
                 )
             )
 
