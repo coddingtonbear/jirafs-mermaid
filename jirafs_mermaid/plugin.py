@@ -43,7 +43,9 @@ class MermaidMixin(object):
                 )
             )
 
-    def validate(self):
+    def validate(self, **kwargs):
+        super().validate(**kwargs)
+
         try:
             subprocess.check_call(
                 ["which", "mmdc"], stdout=subprocess.PIPE, stderr=subprocess.PIPE,
